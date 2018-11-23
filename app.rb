@@ -75,5 +75,5 @@ post '/details/:id' do
 	@db.execute 'insert into Comments (post_id, content, created_date) values (?, ?, datetime())', [post_id, content]
 
 	erb "You typed #{content} for post #{post_id}"
-	resirect to('/details/' + post_id)
+	redirect to('/details/' + post_id)
 end
