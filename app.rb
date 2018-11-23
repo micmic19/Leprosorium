@@ -57,3 +57,10 @@ get '/details/:id' do
 	erb :details
 
 end
+
+post '/details/:id' do
+	post_id = params[:id]
+	content = params[:content]
+
+	erb "You typed #{content} for post #{post_id}"
+end
